@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cREAte 검사(성인용)</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>cREAte 검사(성인용)</h1>
+        <h5 style="text-align: center;">1: 매우 아니다   2: 아니다   3: 보통이다   4: 그렇다   5: 매우 그렇다</h5>
+        <form id="survey-form" onsubmit="return saveData(event, 7);">
+            <div class="form-group">
+                <label for="question121">121. 내 생각과 감정을 상황에 맞게 잘 조절할 수 있다.</label>
+                <div class="rating">
+                    <input type="radio" id="q121-1" name="question121" value="1"><label for="q121-1">1</label>
+                    <input type="radio" id="q121-2" name="question121" value="2"><label for="q121-2">2</label>
+                    <input type="radio" id="q121-3" name="question121" value="3"><label for="q121-3">3</label>
+                    <input type="radio" id="q121-4" name="question121" value="4"><label for="q121-4">4</label>
+                    <input type="radio" id="q121-5" name="question121" value="5"><label for="q121-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question122">122. 나는 기분 나쁜 일이 있어도 필요하면 참을 수 있다.</label>
+                <div class="rating">
+                    <input type="radio" id="q122-1" name="question122" value="1"><label for="q122-1">1</label>
+                    <input type="radio" id="q122-2" name="question122" value="2"><label for="q122-2">2</label>
+                    <input type="radio" id="q122-3" name="question122" value="3"><label for="q122-3">3</label>
+                    <input type="radio" id="q122-4" name="question122" value="4"><label for="q122-4">4</label>
+                    <input type="radio" id="q122-5" name="question122" value="5"><label for="q122-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question123">123. 나는 말을 할 때 상대방이 기분 나쁘지 않도록 말한다.</label>
+                <div class="rating">
+                    <input type="radio" id="q123-1" name="question123" value="1"><label for="q123-1">1</label>
+                    <input type="radio" id="q123-2" name="question123" value="2"><label for="q123-2">2</label>
+                    <input type="radio" id="q123-3" name="question123" value="3"><label for="q123-3">3</label>
+                    <input type="radio" id="q123-4" name="question123" value="4"><label for="q123-4">4</label>
+                    <input type="radio" id="q123-5" name="question123" value="5"><label for="q123-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question124">124. 열심히 노력하면 원하는 것을 이룰 수 있다고 생각한다.</label>
+                <div class="rating">
+                    <input type="radio" id="q124-1" name="question124" value="1"><label for="q124-1">1</label>
+                    <input type="radio" id="q124-2" name="question124" value="2"><label for="q124-2">2</label>
+                    <input type="radio" id="q124-3" name="question124" value="3"><label for="q124-3">3</label>
+                    <input type="radio" id="q124-4" name="question124" value="4"><label for="q124-4">4</label>
+                    <input type="radio" id="q124-5" name="question124" value="5"><label for="q124-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question125">125. 나도 다른 사람들처럼 가치 있는 사람이다.</label>
+                <div class="rating">
+                    <input type="radio" id="q125-1" name="question125" value="1"><label for="q125-1">1</label>
+                    <input type="radio" id="q125-2" name="question125" value="2"><label for="q125-2">2</label>
+                    <input type="radio" id="q125-3" name="question125" value="3"><label for="q125-3">3</label>
+                    <input type="radio" id="q125-4" name="question125" value="4"><label for="q125-4">4</label>
+                    <input type="radio" id="q125-5" name="question125" value="5"><label for="q125-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question126">126. 나는 다른 사람들에게 존중받을 만한 사람이다.</label>
+                <div class="rating">
+                    <input type="radio" id="q126-1" name="question126" value="1"><label for="q126-1">1</label>
+                    <input type="radio" id="q126-2" name="question126" value="2"><label for="q126-2">2</label>
+                    <input type="radio" id="q126-3" name="question126" value="3"><label for="q126-3">3</label>
+                    <input type="radio" id="q126-4" name="question126" value="4"><label for="q126-4">4</label>
+                    <input type="radio" id="q126-5" name="question126" value="5"><label for="q126-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question127">127. 나는 직장 생활, 사회 생활을 잘하는 편이다.</label>
+                <div class="rating">
+                    <input type="radio" id="q127-1" name="question127" value="1"><label for="q127-1">1</label>
+                    <input type="radio" id="q127-2" name="question127" value="2"><label for="q127-2">2</label>
+                    <input type="radio" id="q127-3" name="question127" value="3"><label for="q127-3">3</label>
+                    <input type="radio" id="q127-4" name="question127" value="4"><label for="q127-4">4</label>
+                    <input type="radio" id="q127-5" name="question127" value="5"><label for="q127-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question128">128. 나는 내 성격 중에 마음에 드는 부분이 있다.</label>
+                <div class="rating">
+                    <input type="radio" id="q128-1" name="question128" value="1"><label for="q128-1">1</label>
+                    <input type="radio" id="q128-2" name="question128" value="2"><label for="q128-2">2</label>
+                    <input type="radio" id="q128-3" name="question128" value="3"><label for="q128-3">3</label>
+                    <input type="radio" id="q128-4" name="question128" value="4"><label for="q128-4">4</label>
+                    <input type="radio" id="q128-5" name="question128" value="5"><label for="q128-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question129">129. 나는 지금의 내 모습과 많이 달라졌으면 좋겠다. </label>
+                <div class="rating">
+                    <input type="radio" id="q129-1" name="question129" value="1"><label for="q129-1">1</label>
+                    <input type="radio" id="q129-2" name="question129" value="2"><label for="q129-2">2</label>
+                    <input type="radio" id="q129-3" name="question129" value="3"><label for="q129-3">3</label>
+                    <input type="radio" id="q129-4" name="question129" value="4"><label for="q129-4">4</label>
+                    <input type="radio" id="q129-5" name="question129" value="5"><label for="q129-5">5</label>
+                </div>
+            </div>
+            <button type="submit">제출</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

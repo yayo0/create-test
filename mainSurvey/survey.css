@@ -1,0 +1,114 @@
+/* 공통 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh; /* 최대 높이 설정 */
+    overflow-y: scroll; /* 수직 스크롤 활성화 */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+}
+
+label {
+    flex: 1;
+    margin-bottom: 0.5rem;
+    margin-right: 20px;
+    max-width: 500px; /* 고정 너비 설정 */
+}
+
+.rating {
+    display: flex;
+    justify-content: flex-start; /* 버튼들이 붙어있게 정렬 */
+    gap: 3px; /* 버튼 사이의 간격 없애기 */
+}
+
+/* 라디오 버튼 스타일 */
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    padding: 3px; /* Padding 줄이기 */
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+    width: 20px; /* 크기 줄이기 */
+    height: 20px; /* 크기 줄이기 */
+    line-height: 20px; /* 라벨 안의 텍스트 정렬 */
+    font-size: 0.7rem; /* 텍스트 크기 줄이기 */
+    margin: 0; /* 버튼 사이의 간격 없애기 */
+}
+
+.rating input:checked + label {
+    background-color: #4285f4;
+    color: white;
+    border: 1px solid #4285f4;
+}
+
+/* 버튼 스타일 */
+button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #4285f4;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #357ae8;
+}
+
+/* 모바일 스타일 */
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rating {
+        width: 100%;
+        margin-top: 0.5rem;
+        justify-content: space-around;
+    }
+    .rating label {
+        width: 25px; /* 크기 조정 */
+        height: 25px; /* 크기 조정 */
+        line-height: 25px; /* 라벨 안의 텍스트 정렬 */
+        font-size: 0.7rem;
+        border-radius: 50%; /* 텍스트 크기 조정 */
+        margin: 15px;
+    }
+
+    label {
+        margin-right: 0; /* 모바일에서는 오른쪽 간격 제거 */
+    }
+}

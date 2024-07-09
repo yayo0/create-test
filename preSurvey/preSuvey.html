@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cREAte 검사(성인용)</title>
+    <link rel="stylesheet" href="preSurvey.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>cREAte 검사(성인용)</h1>
+        <h5 style="text-align: center;">아래 정보를 입력해주세요.</h5>
+        <form id="survey-form" onsubmit="return saveStartData(event);">
+            <div class="form-group">
+                <label for="gender">성별:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">선택</option>
+                    <option value="남">남</option>
+                    <option value="여">여</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age">연령:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="school-type">재직 초/중/고 학교 유형:</label>
+                <select id="school-type" name="schoolType" required>
+                    <option value="">선택</option>
+                    <option value="초등학교">초등학교</option>
+                    <option value="중학교">중학교</option>
+                    <option value="고등학교">고등학교</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="subject">담당 교과목: 
+                    <br>
+                    <span style="font-size: 12px;">* 초등일 경우 교대 심화과정 입력 <br>( 예 : 윤리교육 )</span>
+                </label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="years-of-service">근무연수:</label>
+                <input type="number" id="years-of-service" name="yearsOfService" required>
+            </div>
+            <button type="submit">다음</button>
+        </form>
+    </div>
+    <script src="preSurvey.js"></script>
+</body>
+</html>

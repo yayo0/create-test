@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cREAte 검사(성인용) 보고서</title>
+    <script src="https://unpkg.com/chart.js"></script>
+    <script src="https://unpkg.com/chartjs-plugin-datalabels@2.0.0"></script>
+    <link rel="stylesheet" href="report.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            cREAte 검사 보고서
+        </div>
+        <div id="name">
+        </div>
+
+        <button id="logout">로그아웃</button>
+    </header>
+    <div class="result-header">
+        <h2>결과해석 시 유의사항</h2>
+        <p>cREAte 검사는 인지 능력, 사회적 관계, 업무 환경, 행동 패턴, 내적 기질 및 감정 조절 능력을 종합적으로 평가하여,
+            업무 성취와 직접적으로 연결되는 개인의 업무 효과성과 적응력을 측정합니다. 이 검사를 통해 정보 처리 방식,
+            사회적 지지망의 영향, 그리고 자기 조절 능력을 이해할 수 있으며, 이를 바탕으로 귀하의 업무를 개별적으로 지원하고 개선할 수 있는 전략을 마련합니다.
+            본 결과지는 검사결과의 개략적인 내용을 전달하기 위한 결과지로, 결과의 해석에 있어 제한점에 대해 유의해주시기 바랍니다.
+        </p>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="radar-chart"></canvas>
+    </div>
+    <img src="./plot.png" alt="plot">
+
+    <h2>cREAte 지표범위별 해석</h2>
+
+
+    <div class="result-score">
+
+        <h2>하위척도별 점수</h2>
+
+        <div class="result-table">
+            <table>
+                <tr>
+                    <th rowspan="2">척도명</th>
+                    <th colspan="3" class="end">c인지</th>
+                    <th colspan="3">R관계</th>
+                </tr>
+
+                <tr>
+                    <th>업무기술</th>
+                    <th>메타인지</th>
+                    <th class="end">스트레스 조절</th>
+                    <th class="start">가족관계</th>
+                    <th>안정추구</th>
+                    <th>대인관계</th>
+                </tr>
+
+                <tr>
+                    <td>Z점수</td>
+                    <td id="z1"></td>
+                    <td id="z2"></td>
+                    <td id="z3" class="end"></td>
+                    <td id="z4"></td>
+                    <td id="z5"></td>
+                    <td id="z6"></td>
+                </tr>
+                <tr>
+                    <td>수준</td>
+                    <td id="zs1"></td>
+                    <td id="zs2"></td>
+                    <td id="zs3" class="end"></td>
+                    <td id="zs4"></td>
+                    <td id="zs5"></td>
+                    <td id="zs6"></td>
+                </tr>
+            </table>
+        </div>
+
+        <br>
+
+        <div class="result-table">
+            <table>
+                <tr>
+                    <th rowspan="2">척도명</th>
+                    <th colspan="4" class="end">E환경</th>
+                    <th colspan="5">A행동</th>
+                </tr>
+
+                <tr>
+                    <th>정리정돈</th>
+                    <th>업무공간</th>
+                    <th>업무도구</th>
+                    <th class="end">경제적 자원</th>
+                    <th>조절능력</th>
+                    <th>능동적 태도</th>
+                    <th>업무수행력</th>
+                    <th>방해지연행동조절</th>
+                    <th>휴대전화사용조절</th>
+                </tr>
+
+                <tr>
+                    <td>Z점수</td>
+                    <td id="z7"></td>
+                    <td id="z8"></td>
+                    <td id="z9"></td>
+                    <td id="z10" class="end"></td>
+                    <td id="z11"></td>
+                    <td id="z12"></td>
+                    <td id="z13"></td>
+                    <td id="z14"></td>
+                    <td id="z15"></td>
+                </tr>
+                <tr>
+                    <td>수준</td>
+                    <td id="zs7"></td>
+                    <td id="zs8"></td>
+                    <td id="zs9"></td>
+                    <td id="zs10" class="end"></td>
+                    <td id="zs11"></td>
+                    <td id="zs12"></td>
+                    <td id="zs13"></td>
+                    <td id="zs14"></td>
+                    <td id="zs15"></td>
+                </tr>
+            </table>
+        </div>
+
+        <br>
+
+        <div class="result-table">
+            <table>
+                <tr>
+                    <th rowspan="2">척도명</th>
+                    <th colspan="4" class="end">T기질</th>
+                    <th colspan="4">E정서</th>
+                </tr>
+
+                <tr>
+                    <th>긍정적 적응성</th>
+                    <th>회복탄력성</th>
+                    <th>실행가능</th>
+                    <th class="end">자기조절능력</th>
+                    <th>정서자각능력</th>
+                    <th>정서처리방식</th>
+                    <th>정서조절능력</th>
+                    <th>자기평가</th>
+                </tr>
+
+                <tr>
+                    <td>Z점수</td>
+                    <td id="z16"></td>
+                    <td id="z17"></td>
+                    <td id="z18"></td>
+                    <td id="z19" class="end"></td>
+                    <td id="z20"></td>
+                    <td id="z21"></td>
+                    <td id="z22"></td>
+                    <td id="z23"></td>
+                </tr>
+                <tr>
+                    <td>수준</td>
+                    <td id="zs16"></td>
+                    <td id="zs17"></td>
+                    <td id="zs18"></td>
+                    <td id="zs19" class="end"></td>
+                    <td id="zs20"></td>
+                    <td id="zs21"></td>
+                    <td id="zs22"></td>
+                    <td id="zs23"></td>
+                </tr>
+            </table>
+        </div>
+
+        <br>
+
+        <div class="chart-container-bar">
+            <canvas id="bar-chart"></canvas>
+        </div>
+
+        <br>
+
+        <div class="result-smalltable">
+            <div class="smalltable">
+                <table>
+                    <caption>C인지</caption>
+                    <tr>
+                        <th>척도</th>
+                        <th>점수</th>
+                        <th>설명</th>
+                    </tr>
+                    <tr>
+                        <td id="t1">업무기술</td>
+                        <td id="d1"></td>
+                        <td>업무에 필요한 실제적인 기술, 집중하기 위해 필요한 조건, 전략적으로 집중하는 능력, 업무 진행 과정에서 정보를 받아들이고 이해하는 데 필요한 전략, 능률적인 업무 진행을 위해 적절한 필기방법과 전략의 수준을 측정합니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="t2">메타인지</td>
+                        <td id="d2"></td>
+                        <td>업무를 진행하는 과정에서 계획을 세우고 중요도에 따라서 맡은 일을 실천하는 전략적 사고능력, 자신의 수행과정에 대해서 점검하고 오류를 찾아내는 능력, 결과를 예측하는 능력을 측정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t3">스트레스 조절</td>
+                        <td id="d3"></td>
+                        <td>업무수행과정에서 경험할 수 있는 성과 및 능력에 대한 압박을 업무에 부정적인 스트레스로 작용하지 않도록 조절하는 능력을 측정합니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">
+                            <strong>인지 특성 상세 설명</strong>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="i1"></td>
+
+                    </tr>
+                </table>
+
+                <br>
+
+                <table>
+                    <caption>R관계</caption>
+                    <tr>
+                        <th>척도</th>
+                        <th>점수</th>
+                        <th>설명</th>
+                    </tr>
+                    <tr>
+                        <td id="t4">가족관계</td>
+                        <td id="d4"></td>
+                        <td>가족관계에서 느끼는 1) 가족들의 정서적 지원, 2) 고민을 가족들에게 알리고 도움을 요청하는 것에 대한 심리적 수월성, 3) 자신의 어려움에 대한 가족들의 이해도,  4) 어려움이 있을때 가족들에게 의지할수 있다는 신뢰감, 5) 가족간의 친밀도에 대한 점수입니다.   
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="t5">안정추구</td>
+                        <td id="d5"></td>
+                        <td>가족 및 주변사람들과의 관계에서 1) 기대에 미치지 못할 것에 대한 두려움 2) 기대에 부응하고자 하는 욕구 3) 타인에게 인정받고자 하는 인정동기에 대해서 측정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t6">대인관계</td>
+                        <td id="d6"></td>
+                        <td>친구와의 관계에서 1) 고민을 개방할 수 있는 심리적으로 가깝고 편안한 친구관계 2) 친구관계에 대한 평가 3) 타인에 대한 신뢰감을 측정하는 문항입니다.</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">
+                            <strong>관계 특성 상세 설명</strong>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="i2"></td>
+
+                    </tr>
+                </table>
+
+                <br>
+
+                <table>
+                    <caption>E환경</caption>
+                    <tr>
+                        <th>척도</th>
+                        <th>점수</th>
+                        <th>설명</th>
+                    </tr>
+                    <tr>
+                        <td id="t7">정리정돈</td>
+                        <td id="d7"></td>
+                        <td>업무를 위해 주변공간이 효율적으로 정리되어 있는지 확인하는 항목입니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t8">업무공간</td>
+                        <td id="d8"></td>
+                        <td>업무공간이 일에 효율적으로 적절하게 구성되어 있는지 확인하는 항목입니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t9">업무도구</td>
+                        <td id="d9"></td>
+                        <td>업무에 필요한 도구들이 준비되어 있는지 확인하는 항목입니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t10">경제적 자원</td>
+                        <td id="d10"></td>
+                        <td>자기개발을 위한 경제적인 자원의 가용성을 확인하는 항목입니다.</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">
+                            <strong>환경 특성 상세 설명</strong>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="i3"></td>
+
+                    </tr>
+                </table>
+
+                <br>
+
+                <table>
+                    <caption>A행동</caption>
+                    <tr>
+                        <th>척도</th>
+                        <th>점수</th>
+                        <th>설명</th>
+                    </tr>
+                    <tr>
+                        <td id="t11">조절능력</td>
+                        <td id="d11"></td>
+                        <td>업무에서 목표를 정하고, 계획을 세우며, 실행하는 능력을 측정합니다</td>
+                    </tr>
+                    <tr>
+                        <td id="t12">능동적 태도</td>
+                        <td id="d12"></td>
+                        <td>업무 진행 과정에서의 자기주도적이고 능동적인 태도를 측정하는 항목입니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t13">업무수행력</td>
+                        <td id="d13"></td>
+                        <td>업무에서 실제로 업무를 실천하는 역량에 대해 측정하는 항목입니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t14">방해지연행동조절</td>
+                        <td id="d14"></td>
+                        <td>효율적인 업무 수행을 막는 방해 및 지연행동에 대해 측정하는 항목입니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t15">휴대전화사용조절</td>
+                        <td id="d15"></td>
+                        <td>업무 수행 과정에서 인지효율을 높이는 방식으로 적절하게 휴대전화사용을 조절하는 능력에 대해 측정하는 항목입니다.</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">
+                            <strong>행동 특성 상세 설명</strong>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="i4"></td>
+
+                    </tr>
+                </table>
+
+                <br>
+
+                <table>
+                    <caption>t기질</caption>
+                    <tr>
+                        <th>척도</th>
+                        <th>점수</th>
+                        <th>설명</th>
+                    </tr>
+                    <tr>
+                        <td id="t16">긍정적 적응성</td>
+                        <td id="d16"></td>
+                        <td>타고난 기질적인 특성 중에서 긍정적인 심리적 자본에 대해 측정하는 항목입니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t17">회복탄력성</td>
+                        <td id="d17"></td>
+                        <td>좌절과 실패, 어려움에 직면하여 극복하는 회복탄력성에 대해 측정하는 항목입니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t18">실행가능</td>
+                        <td id="d18"></td>
+                        <td>업무과정에서 주의 집중력과 실행과정에서의 방해요인을 통제하는 조절능력을 측정하는 항목입니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t19">자기조절능력</td>
+                        <td id="d19"></td>
+                        <td>업무과정에서 목표달성을 위한 인내력과 성찰능력, 전략적 대응능력에 대해 측정하는 항목입니다.</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">
+                            <strong>기질 특성 상세 설명</strong>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="i5"></td>
+
+                    </tr>
+                </table>
+
+                <br>
+
+                <table>
+                    <caption>e정서</caption>
+                    <tr>
+                        <th>척도</th>
+                        <th>점수</th>
+                        <th>설명</th>
+                    </tr>
+                    <tr>
+                        <td id="t20">정서자각능력</td>
+                        <td id="d20"></td>
+                        <td>자신과 타인의 감정을 알아차리고 인식하며 이해하는 역량에 대해 측정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t21">정서처리방식</td>
+                        <td id="d21"></td>
+                        <td>업무과정에서 경험할 수 있는 정서적인 어려움을 성숙하고 긍정적이며 업무에 도움이 되는 방식으로 처리할 수 있는 능력에 대해 측정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t22">정서조절능력</td>
+                        <td id="d22"></td>
+                        <td>다양한 상황에서 자신의 감정을 관리하고 조절하며 스트레스 상황에서 적절하게 대처하는 능력을 측정합니다.</td>
+                    </tr>
+                    <tr>
+                        <td id="t23">자기평가</td>
+                        <td id="d23"></td>
+                        <td>스스로에 대한 효능감, 존중정도, 만족감에 대해 측정합니다.</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">
+                            <strong>정서 특성 상세 설명</strong>
+                    </tr>
+                    <tr>
+                        <td colspan="4" id="i6"></td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <h2>강점/약점</h2>
+        <div class="strength">
+            <p>귀하의 강점은 <span id="maxkeys"></span>이며 특히 <span id="maxkey"></span>,
+                <span id="maxtrait"></span>이(가) 강점으로 나타났습니다.
+            </p>
+
+            <p>업무과정에서 강점인 <span id="maxkeys2"></span>의 <span id="maxkey2"></span>을(를) 적극적으로 활용하고
+                잠재적인 발달수준에 있는 <span id="minkeys"></span>의 <span id="minkey"></span>을(를) 보완해서 발달을 위해 노력한다면
+                원하는 목표를 이루기 위한 중요한 힘을 얻을 수 있을 것입니다.</p>
+
+            <p> 귀하의 발달 가능성이 가장 큰 영역은 <span id="minkeys2"></span>의 <span id="minkey2"></span>, <span id="mintrait"></span>
+                (으)로 분석되었습니다. 이 영역들을 인지하고 적절한 방향으로 개선한다면 자신의 잠재력을 발휘하고 강점을 더욱 강화할 수 있습니다.
+            </p>
+        </div>
+
+    </div>
+    <br>
+    <script>
+        function loadScript(url) {
+            var script = document.createElement('script');
+            script.type = 'module';
+            script.src = url;
+            document.head.appendChild(script);
+        }
+    
+        // Initialize the page
+        window.onload = function() {
+            loadScript('analysis.js');
+        };
+    </script>
+    <script type="module" src="makeTable.js"></script>
+</body>
+
+</html>
+

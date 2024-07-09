@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cREAte 검사(성인용)</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>cREAte 검사(성인용)</h1>
+        <h5 style="text-align: center;">1: 매우 아니다   2: 아니다   3: 보통이다   4: 그렇다   5: 매우 그렇다</h5>
+        <form id="survey-form" onsubmit="return saveData(event, 5);">
+            <div class="form-group">
+                <label for="question81">81. 나는 일을 할 때 간식을 먹는다.</label>
+                <div class="rating">
+                    <input type="radio" id="q81-1" name="question81" value="1"><label for="q81-1">1</label>
+                    <input type="radio" id="q81-2" name="question81" value="2"><label for="q81-2">2</label>
+                    <input type="radio" id="q81-3" name="question81" value="3"><label for="q81-3">3</label>
+                    <input type="radio" id="q81-4" name="question81" value="4"><label for="q81-4">4</label>
+                    <input type="radio" id="q81-5" name="question81" value="5"><label for="q81-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question82">82. 나는 일을 하다가 자꾸 다른 것을 하게 된다.</label>
+                <div class="rating">
+                    <input type="radio" id="q82-1" name="question82" value="1"><label for="q82-1">1</label>
+                    <input type="radio" id="q82-2" name="question82" value="2"><label for="q82-2">2</label>
+                    <input type="radio" id="q82-3" name="question82" value="3"><label for="q82-3">3</label>
+                    <input type="radio" id="q82-4" name="question82" value="4"><label for="q82-4">4</label>
+                    <input type="radio" id="q82-5" name="question82" value="5"><label for="q82-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question83">83. 나는 일을 할 때 가만히 앉아있지 않고 돌아다니는 편이다.</label>
+                <div class="rating">
+                    <input type="radio" id="q83-1" name="question83" value="1"><label for="q83-1">1</label>
+                    <input type="radio" id="q83-2" name="question83" value="2"><label for="q83-2">2</label>
+                    <input type="radio" id="q83-3" name="question83" value="3"><label for="q83-3">3</label>
+                    <input type="radio" id="q83-4" name="question83" value="4"><label for="q83-4">4</label>
+                    <input type="radio" id="q83-5" name="question83" value="5"><label for="q83-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question84">84. 나는 일을 할 때 책상 위에 휴대전화를 올려둔다.</label>
+                <div class="rating">
+                    <input type="radio" id="q84-1" name="question84" value="1"><label for="q84-1">1</label>
+                    <input type="radio" id="q84-2" name="question84" value="2"><label for="q84-2">2</label>
+                    <input type="radio" id="q84-3" name="question84" value="3"><label for="q84-3">3</label>
+                    <input type="radio" id="q84-4" name="question84" value="4"><label for="q84-4">4</label>
+                    <input type="radio" id="q84-5" name="question84" value="5"><label for="q84-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question85">85. 휴대전화로 음악 감상, 게임, 웹툰 보기 같은 활동을 하며 자유시간을 보낸다.</label>
+                <div class="rating">
+                    <input type="radio" id="q85-1" name="question85" value="1"><label for="q85-1">1</label>
+                    <input type="radio" id="q85-2" name="question85" value="2"><label for="q85-2">2</label>
+                    <input type="radio" id="q85-3" name="question85" value="3"><label for="q85-3">3</label>
+                    <input type="radio" id="q85-4" name="question85" value="4"><label for="q85-4">4</label>
+                    <input type="radio" id="q85-5" name="question85" value="5"><label for="q85-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question86">86. 별일 없어도 자꾸 문자나 메세지를 확인하게 된다.</label>
+                <div class="rating">
+                    <input type="radio" id="q86-1" name="question86" value="1"><label for="q86-1">1</label>
+                    <input type="radio" id="q86-2" name="question86" value="2"><label for="q86-2">2</label>
+                    <input type="radio" id="q86-3" name="question86" value="3"><label for="q86-3">3</label>
+                    <input type="radio" id="q86-4" name="question86" value="4"><label for="q86-4">4</label>
+                    <input type="radio" id="q86-5" name="question86" value="5"><label for="q86-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question87">87. 나에게 좋은 일이 일어날 것이라고는 거의 기대하지 않는다.</label>
+                <div class="rating">
+                    <input type="radio" id="q87-1" name="question87" value="1"><label for="q87-1">1</label>
+                    <input type="radio" id="q87-2" name="question87" value="2"><label for="q87-2">2</label>
+                    <input type="radio" id="q87-3" name="question87" value="3"><label for="q87-3">3</label>
+                    <input type="radio" id="q87-4" name="question87" value="4"><label for="q87-4">4</label>
+                    <input type="radio" id="q87-5" name="question87" value="5"><label for="q87-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question88">88. 내 미래는 밝을 것이다.</label>
+                <div class="rating">
+                    <input type="radio" id="q88-1" name="question88" value="1"><label for="q88-1">1</label>
+                    <input type="radio" id="q88-2" name="question88" value="2"><label for="q88-2">2</label>
+                    <input type="radio" id="q88-3" name="question88" value="3"><label for="q88-3">3</label>
+                    <input type="radio" id="q88-4" name="question88" value="4"><label for="q88-4">4</label>
+                    <input type="radio" id="q88-5" name="question88" value="5"><label for="q88-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question89">89. 결과를 알 수 없을 때, 나는 좋은 결과를 기대한다.</label>
+                <div class="rating">
+                    <input type="radio" id="q89-1" name="question89" value="1"><label for="q89-1">1</label>
+                    <input type="radio" id="q89-2" name="question89" value="2"><label for="q89-2">2</label>
+                    <input type="radio" id="q89-3" name="question89" value="3"><label for="q89-3">3</label>
+                    <input type="radio" id="q89-4" name="question89" value="4"><label for="q89-4">4</label>
+                    <input type="radio" id="q89-5" name="question89" value="5"><label for="q89-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question90">90. 힘든 일이 있을 때, 이걸 극복하면 내가 더 강해질 수 있을 거라 생각한다.</label>
+                <div class="rating">
+                    <input type="radio" id="q90-1" name="question90" value="1"><label for="q90-1">1</label>
+                    <input type="radio" id="q90-2" name="question90" value="2"><label for="q90-2">2</label>
+                    <input type="radio" id="q90-3" name="question90" value="3"><label for="q90-3">3</label>
+                    <input type="radio" id="q90-4" name="question90" value="4"><label for="q90-4">4</label>
+                    <input type="radio" id="q90-5" name="question90" value="5"><label for="q90-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question91">91. 힘든 상황에서도 배울 것이 있다고 생각한다.</label>
+                <div class="rating">
+                    <input type="radio" id="q91-1" name="question91" value="1"><label for="q91-1">1</label>
+                    <input type="radio" id="q91-2" name="question91" value="2"><label for="q91-2">2</label>
+                    <input type="radio" id="q91-3" name="question91" value="3"><label for="q91-3">3</label>
+                    <input type="radio" id="q91-4" name="question91" value="4"><label for="q91-4">4</label>
+                    <input type="radio" id="q91-5" name="question91" value="5"><label for="q91-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question92">92. 나쁜 일이 생기면, 살다 보면 이런 일도 겪을 수 있다고 생각한다.</label>
+                <div class="rating">
+                    <input type="radio" id="q92-1" name="question92" value="1"><label for="q92-1">1</label>
+                    <input type="radio" id="q92-2" name="question92" value="2"><label for="q92-2">2</label>
+                    <input type="radio" id="q92-3" name="question92" value="3"><label for="q92-3">3</label>
+                    <input type="radio" id="q92-4" name="question92" value="4"><label for="q92-4">4</label>
+                    <input type="radio" id="q92-5" name="question92" value="5"><label for="q92-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question93">93. 나는 너무 쉬운 문제보다 틀린다고 해도 어려운 문제에 도전하는 게 낫다.</label>
+                <div class="rating">
+                    <input type="radio" id="q93-1" name="question93" value="1"><label for="q93-1">1</label>
+                    <input type="radio" id="q93-2" name="question93" value="2"><label for="q93-2">2</label>
+                    <input type="radio" id="q93-3" name="question93" value="3"><label for="q93-3">3</label>
+                    <input type="radio" id="q93-4" name="question93" value="4"><label for="q93-4">4</label>
+                    <input type="radio" id="q93-5" name="question93" value="5"><label for="q93-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question94">94. 나는 틀린 문제를 다시 푸는 게 괴롭지 않다.</label>
+                <div class="rating">
+                    <input type="radio" id="q94-1" name="question94" value="1"><label for="q94-1">1</label>
+                    <input type="radio" id="q94-2" name="question94" value="2"><label for="q94-2">2</label>
+                    <input type="radio" id="q94-3" name="question94" value="3"><label for="q94-3">3</label>
+                    <input type="radio" id="q94-4" name="question94" value="4"><label for="q94-4">4</label>
+                    <input type="radio" id="q94-5" name="question94" value="5"><label for="q94-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question95">95. 목표 달성에 실패하더라도 힘을 내서 다시 시작할 수 있다.</label>
+                <div class="rating">
+                    <input type="radio" id="q95-1" name="question95" value="1"><label for="q95-1">1</label>
+                    <input type="radio" id="q95-2" name="question95" value="2"><label for="q95-2">2</label>
+                    <input type="radio" id="q95-3" name="question95" value="3"><label for="q95-3">3</label>
+                    <input type="radio" id="q95-4" name="question95" value="4"><label for="q95-4">4</label>
+                    <input type="radio" id="q95-5" name="question95" value="5"><label for="q95-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question96">96. 노력한 만큼 성과나 실적이 나오지 않을까봐 초조하고 불안하다.</label>
+                <div class="rating">
+                    <input type="radio" id="q96-1" name="question96" value="1"><label for="q96-1">1</label>
+                    <input type="radio" id="q96-2" name="question96" value="2"><label for="q96-2">2</label>
+                    <input type="radio" id="q96-3" name="question96" value="3"><label for="q96-3">3</label>
+                    <input type="radio" id="q96-4" name="question96" value="4"><label for="q96-4">4</label>
+                    <input type="radio" id="q96-5" name="question96" value="5"><label for="q96-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question97">97. 일을 안 하고 있으면 불안하다.</label>
+                <div class="rating">
+                    <input type="radio" id="q97-1" name="question97" value="1"><label for="q97-1">1</label>
+                    <input type="radio" id="q97-2" name="question97" value="2"><label for="q97-2">2</label>
+                    <input type="radio" id="q97-3" name="question97" value="3"><label for="q97-3">3</label>
+                    <input type="radio" id="q97-4" name="question97" value="4"><label for="q97-4">4</label>
+                    <input type="radio" id="q97-5" name="question97" value="5"><label for="q97-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question98">98. 평소에도 마음 편하게 잘 쉬지 못한다.</label>
+                <div class="rating">
+                    <input type="radio" id="q98-1" name="question98" value="1"><label for="q98-1">1</label>
+                    <input type="radio" id="q98-2" name="question98" value="2"><label for="q98-2">2</label>
+                    <input type="radio" id="q98-3" name="question98" value="3"><label for="q98-3">3</label>
+                    <input type="radio" id="q98-4" name="question98" value="4"><label for="q98-4">4</label>
+                    <input type="radio" id="q98-5" name="question98" value="5"><label for="q98-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question99">99. 나는 예상하지 못했던 일이 생기면 매우 당황한다.</label>
+                <div class="rating">
+                    <input type="radio" id="q99-1" name="question99" value="1"><label for="q99-1">1</label>
+                    <input type="radio" id="q99-2" name="question99" value="2"><label for="q99-2">2</label>
+                    <input type="radio" id="q99-3" name="question99" value="3"><label for="q99-3">3</label>
+                    <input type="radio" id="q99-4" name="question99" value="4"><label for="q99-4">4</label>
+                    <input type="radio" id="q99-5" name="question99" value="5"><label for="q99-5">5</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="question100">100. 작은 일이라도 마음에 걸리는 게 있으면 집중할 수가 없다.</label>
+                <div class="rating">
+                    <input type="radio" id="q100-1" name="question100" value="1"><label for="q100-1">1</label>
+                    <input type="radio" id="q100-2" name="question100" value="2"><label for="q100-2">2</label>
+                    <input type="radio" id="q100-3" name="question100" value="3"><label for="q100-3">3</label>
+                    <input type="radio" id="q100-4" name="question100" value="4"><label for="q100-4">4</label>
+                    <input type="radio" id="q100-5" name="question100" value="5"><label for="q100-5">5</label>
+                </div>
+            </div>
+            <button type="submit">Next</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
