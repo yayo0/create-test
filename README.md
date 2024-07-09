@@ -2,6 +2,10 @@
 
 This project is a comprehensive assessment site for the cREAte test, which evaluates cognitive abilities, social relationships, work environment, behavioral patterns, intrinsic temperament, and emotional regulation abilities. The test aims to measure an individual's work effectiveness and adaptability, which are directly linked to job achievement.
 
+## Deployment
+
+The site is deployed at [https://createtest.net](https://createtest.net).
+
 ## Tech Stack
 
 ### Development
@@ -13,6 +17,7 @@ This project is a comprehensive assessment site for the cREAte test, which evalu
 ![MySQL](https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 ### Program Tools
+![Visual Studio Code](https://img.shields.io/badge/visual_studio_code-0078d7?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![phpMyAdmin](https://img.shields.io/badge/phpMyAdmin-6C78AF?style=for-the-badge&logo=phpmyadmin&logoColor=white)
 ![FileZilla](https://img.shields.io/badge/filezilla-BF0000?style=for-the-badge&logo=filezilla&logoColor=white)
 
