@@ -1,4 +1,4 @@
-# cREAte Test Site
+# cREAte Test Website
 
 This project is a comprehensive assessment site for the cREAte test, which evaluates (c)ognitive abilities, social (R)elationships, work (E)nvironment, (A)cting patterns, intrinsic (t)emperament, and (e)motional regulation abilities. The test aims to measure an individual's work effectiveness and adaptability, which are directly linked to job achievement.
 
