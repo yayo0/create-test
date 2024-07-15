@@ -22,7 +22,7 @@ $emailPrefix = $data['emailPrefix'];
 
 // SQL 쿼리 작성 및 실행
 $emailPrefixEscaped = $conn->real_escape_string($emailPrefix);
-$sql = "SELECT Report FROM Create_data WHERE ID LIKE '$emailPrefix%'";
+$sql = "SELECT Report FROM Create_data WHERE ID = '$emailPrefix'";
 
 $result = $conn->query($sql);
 
